@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dom Event Summary</title>
+</head>
+<body>
+      <h1>Dom event handlers</h1> 
+       <h3 id="handlers">i am a programer with js</h3>
+       <button onclick="clickMe()">Click me</button>
+
+       <br> <br>
+       <!-- By add event listener -->
+       <button id="event-listener">Handlers By add EventListener
+
+       </button>
+       <script>
+            // function clickMe() {
+            //     console.log('button clicked');
+                  
+            // }
+
+            function clickMe() {
+                  const handlers = document.getElementById('handlers');
+                  handlers.innerText = 'hi aarina kemon acho'
+            }
+            // by add event listener
+            document.getElementById('event-listener').addEventListener('click',function () {
+                  const handlers = document.getElementById('handlers');
+                  handlers.innerText = 'i am handling this with add event listener'
+            })
+
+
+
+       </script>
+</body>
+</html>

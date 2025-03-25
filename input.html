@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Use Dom One Input field</title>
+</head>
+<body>
+        <h1>Changing input with useing DOM </h1>
+        <p id="paragraph">This is arinas text</p>
+        <br>
+        <input id="input-field" type="text">
+        <button id="btn-update">update</button>
+
+        <script>
+                // input text in a input field
+document.getElementById('btn-update').addEventListener('click',function() {
+        console.log('button clicked');
+        
+     const inputField = document.getElementById('input-field')  
+     const innerText = inputField.value;
+     console.log(innerText);
+     const paragraph = document.getElementById('paragraph')
+      paragraph.innerText = innerText;
+      inputField.value = "";
+     
+     
+     
+     
+})
+        </script>
+</body>
+</html>

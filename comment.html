@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comment Box </title>
+</head>
+
+<body>
+        <!-- make comment box -->
+        <h1>Make Comment Box </h1>
+        <div id="comment-box">
+                <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel beatae minima dignissimos, facere
+                        eaque, soluta quas illo odit laudantium dolores accusamus laborum, optio aliquid quaerat quam
+                        veritatis dicta quis ipsam.
+                </p>
+                <p>
+                        Non, sequi! Fugiat cupiditate voluptas dolorem voluptatem laudantium sequi temporibus excepturi
+                        ipsum itaque cumque aut praesentium, sit id. Eligendi odit recusandae maxime iure similique
+                        possimus nisi! Incidunt corrupti molestiae recusandae!
+                </p>
+                <p>
+                        Doloribus explicabo reprehenderit velit deserunt quisquam neque hic, minus minima dolore et ut
+                        nulla voluptas, officia pariatur deleniti! Optio porro ullam voluptas maiores id vel fugiat
+                        dignissimos autem excepturi iure!
+                </p>
+        </div>
+        <textarea name="" id="text-area" cols="90" rows="5"></textarea>
+        <br>
+        <button id="btn-update">update</button>
+
+        <script>
+                document.getElementById('btn-update').addEventListener('click',function () {
+                        // console.log('button clicked');
+                        const textArea = document.getElementById('text-area');
+                        const newText = textArea.value;
+                        // console.log(newText);
+
+                        const commentBox = document.getElementById('comment-box');
+                        const para = document.createElement('p');
+                        para.innerText = newText;
+                        commentBox.appendChild(para);
+                        textArea.value = "";
+                        
+
+                        
+                })
+        </script>
+</body>
+
+</html>
