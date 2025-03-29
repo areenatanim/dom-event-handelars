@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Git-hub like working</title>
+</head>
+<body>
+        <h1 id="secret-text">My secret Heading</h1>
+        <p>delete delate</p>
+        <input id="text-delate" type="text" placeholder="please type delate">
+        <button id="delate-button" disabled>Delate</button>
+        <script>
+                document.getElementById("text-delate").addEventListener('keyup', function(event){
+                        const text = event.target.value;
+          const delateButton = document.getElementById('delate-button')
+                        if (text === 'delate'){
+                      delateButton.removeAttribute('disabled')
+                        }
+                        else{
+                                delateButton.setAttribute('disabled', true)
+                        }
+                        
+                })
+
+                document.getElementById("delate-button").addEventListener('click', function(){
+                   const secret = document.getElementById("secret-text")
+                   secret.style.display = 'none'
+                })
+
+        </script>
+</body>
+</html>
